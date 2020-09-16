@@ -129,6 +129,8 @@ GEM
     omniauth-oauth2 (1.7.0)
       oauth2 (~> 1.4)
       omniauth (~> 1.9)
+    pg (1.2.3)
+    pg (1.2.3-x64-mingw32)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -191,7 +193,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -235,12 +236,12 @@ DEPENDENCIES
   nokogiri
   omniauth
   omniauth-github
+  pg
   pry
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   sass-rails (>= 6)
   selenium-webdriver
-  sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
