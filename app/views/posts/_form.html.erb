@@ -10,6 +10,6 @@
 
     <%= f.label :genre %><br>
     <%= f.collection_select :genre_id, Genre.all, :id, :genre_name %><br><br>
-r
+
     <%= f.submit "Submit" %>
 <% end %>
