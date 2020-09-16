@@ -1,0 +1,34 @@
+<div class="card box-shadow" >
+
+        <div class="card-header">
+            <h1><%= @post.title %></h1>
+        </div>
+        
+        <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+            <h3>Media: </h3>
+            <img src=<%=@post.url%> width="480em" height="270em" frameBorder="0" class="giphy-embed">
+            </li>
+
+            <li class="list-group-item">
+            <h3>Description: </h3>
+            <p><%= @post.description %></p>
+            </li>
+
+            <li class="list-group-item">
+            <h3>Post Genre: </h3>
+            <p><%= @post.genre.genre_name %></p>
+            </li>
+
+            <li class="list-group-item">
+            <h3>Post Author: </h3>
+            <p><%= @post.user.username %></p>
+            </li>
+        </ul>
+    </div>
+        <div class="card-footer text-muted">
+            <%= button_to "Edit Post", edit_user_post_path(@user, @post), method: :get, class:"btn btn-secondary"%><br>
+            <%= button_to "Delete Post", user_post_path, method: :delete, class:"btn btn-danger"%>
+        </div>
+</div>

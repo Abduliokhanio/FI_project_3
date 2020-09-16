@@ -1,0 +1,19 @@
+<div class="card post-form box-shadow">
+    <div class="card-body">
+    <%= render 'user_errors' %>
+
+        <%= form_for @user do |f| %>
+        <%= f.label :image%><br>
+        <%= f.text_field :image%><br>
+        <%= f.label :password%><br>
+        <%= f.password_field :password%><br>
+        <%= f.label :website%><br>
+        <%= f.text_field :website%><br>
+        <%= f.label :location%><br>
+        <%= f.text_field :location%><br>
+        <%= f.label :bio%><br>
+        <%= f.text_field :bio%><br><br>
+        <%= f.submit "Edit User"%>
+        <%end %>
+    </div>
+</div>

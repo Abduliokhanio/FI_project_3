@@ -1,0 +1,20 @@
+ <div class="d-none d-xl-block">
+     <div class="">
+         <div class="card border-dark">
+             <div class="card-body">
+                 <div class="user-image">
+                     <p>Image: <img class="card-img-top" src=<%=@user.image%>></p>
+                 </div><br>
+                 <div>
+                     <p><b><%= @user.username %></b></p>
+                     <p><i>Website: <a href=<%=@user.website%>><%= @user.website %></a></i></p>
+                     <p><i>Location: <%= @user.location %></p>
+                     <p><i>BIO: <%= @user.bio %></p>
+                 </div>
+             </div>
+             <div class="card-footer text-muted">
+                 <a class="btn btn-primary" href=<%=edit_user_path(@user)%>>Edit</a>
+             </div>
+         </div>
+     </div>
+ </div>

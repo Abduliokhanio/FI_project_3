@@ -1,0 +1,27 @@
+<div class="card center border-dark">
+    <div class="card post-form ">
+        <div class="card-body">
+            <% if flash[:errors] %>
+                <% flash[:errors].each do |error| %>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong><%= error%></strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <% end %>
+            <% end %>
+            <h1>Login</h1>
+            <%= form_tag '/login' do %>
+            <%= label_tag :username%><br>
+            <%= text_field_tag :username %><br>
+            <%= label_tag :password%><br>
+            <%= password_field_tag :password%><br><br>
+            <%= submit_tag "Login"%>
+            <%end%>
+            <br>
+            <%= button_to "Signup", '/signup', method: :get%>
+            <%= button_to "Signin with GitHub", '/auth/github', method: :get%>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,120 @@
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar {
+    min-height: 38px;
+    background-color: #f55e55;
+    position: sticky;
+    z-index: 1;
+}
+
+.card-deck {
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.box-shadow{
+  box-shadow:5px 5px 10px black;
+}
+
+.right{
+  width: 285px;
+  position: fixed;
+  top:20;
+  right:20vw;
+ }
+ .right-show{
+  width: 285px;
+  position: fixed;
+  top:20;
+  right:11vw;
+ }
+
+ .left{
+  width: 285px;
+  height: 550px;
+  position: absolute;
+  top:20;
+  left:20vw;
+ }
+
+ .left-show{
+  width: 285px;
+  position: absolute;
+  top:20;
+  left:11vw;
+ }
+
+.user-image{
+  max-width: 300em;
+  max-height: 300em;
+  margin: auto;
+}
+
+.post-form{
+  width: 300px;
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.edit-form{
+  margin: auto;
+  margin-bottom: 20px;
+  width:800px;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* styles for '...' */ 
+.card-text-description {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative; 
+  /* use this value to count block height */
+  line-height: 1.2em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 3.6em; 
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;  
+  /* place for '...' */
+  margin-right: 1em;
+  padding-right: 1em;
+}
+/* create the ... */
+.card-text-description:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+.card-text-description:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  /* bg color = bg color under block */
+  background: white;
+}

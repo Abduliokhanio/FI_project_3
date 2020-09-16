@@ -1,0 +1,22 @@
+<% @posts.reverse.each do |post|%>
+<div class="card-deck">
+    <div class="card box-shadow">
+        <img class="card-img-top" src=<%=post.url%> width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen>
+        <div class="card-body">
+            <h5 class="card-title"><%= link_to post.title, user_post_path(@user, post) %></h5>
+            <p class="card-text-description"><%= post.description %></p>
+            <p class="card-text">
+                <small class="text-muted"><%=post.user.username%><br>
+                <%= link_to genre_posts_path(post.genre_id) do %>
+                    <u><%=post.genre.genre_name%></u>
+                    
+                <% end %>
+                 </small>
+            </p>
+        </div>
+        <div class="card-footer">
+        <small class="text-muted">Updated at: <%=post.updated_at.strftime("%F %I:%M%p")%></small>
+        </div>
+    </div>
+</div>   
+<% end %>

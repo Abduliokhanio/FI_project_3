@@ -1,0 +1,15 @@
+<%= form_for(@post, url: user_post_path(@user)) do |f| %>
+<%= f.label :url %><br>
+<%= f.text_field :url %><br>
+
+<%= f.label :title %><br>
+<%= f.text_field :title %><br>
+
+<%= f.label :description %><br>
+<%= f.text_field :description %><br><br>
+
+<%= f.label :genre %><br>
+<%= f.collection_select :genre_id, Genre.all, :id, :genre_name %><br><br>
+
+<%= f.submit "Submit" %>
+<% end %>
